@@ -11,6 +11,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Wistia Player (loaded once, all videos share this) -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/ts90olaac4.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/lq28nchwmv.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/uukp3q3u5e.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/jpy5g1g89v.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/2wzj7gaw24.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/9u1xdlkqc9.js" async type="module"></script>
+  <style>
+    /* Wistia placeholder thumbnails before player hydrates */
+    wistia-player:not(:defined) { display: block; filter: blur(5px); background-size: cover; background-position: center; }
+    wistia-player[media-id='ts90olaac4']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/ts90olaac4/swatch'); }
+    wistia-player[media-id='lq28nchwmv']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/lq28nchwmv/swatch'); }
+    wistia-player[media-id='uukp3q3u5e']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/uukp3q3u5e/swatch'); }
+    wistia-player[media-id='jpy5g1g89v']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/jpy5g1g89v/swatch'); }
+    wistia-player[media-id='2wzj7gaw24']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/2wzj7gaw24/swatch'); }
+    wistia-player[media-id='9u1xdlkqc9']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/9u1xdlkqc9/swatch'); }
+  </style>
+
   <style>
     /* ---------- Base & Reset ---------- */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -213,6 +232,19 @@
       cursor: pointer;
       position: relative;
       overflow: hidden;
+    }
+    /* Vimeo VSL embed */
+    .video-embed {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #0b3a23;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .video-embed iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: 0;
     }
     .video-placeholder::before {
       content: '';
@@ -425,29 +457,21 @@
       transform: translateY(-4px);
       box-shadow: 0 20px 40px -20px rgba(15,76,46,0.2);
     }
+    /* Vertical (9:16) testimonial video container — fits Reels/portrait Wistia embeds */
     .video-thumb {
-      aspect-ratio: 16/9;
-      background: linear-gradient(135deg, rgba(15,76,46,0.85) 0%, rgba(15,76,46,0.65) 100%);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      cursor: pointer;
-      position: relative;
+      aspect-ratio: 9 / 16;
+      max-width: 260px;
+      margin: 0 auto 20px;
+      background: #0b3a23;
+      border-radius: 10px;
       overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 24px -10px rgba(15,76,46,0.35);
     }
-    .video-thumb::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05), transparent 65%);
-    }
-    .video-thumb .play-button { width: 56px; height: 56px; }
-    .video-thumb .play-button::before {
-      border-left: 16px solid #fff;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      margin-left: 4px;
+    .video-thumb wistia-player {
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
     }
     .badge-pill {
       display: inline-block;
@@ -662,7 +686,7 @@
             Clear, personalized plan
           </li>
         </ul>
-        <a class="btn btn-pulse reveal" href="https://fairwayperformancevipcoaching.com/bookyourgolfperformancecall">
+        <a class="btn btn-pulse reveal" href="https://fairwayperformance.as.me/30minutediscoverycall">
           Book Your Free Golf Performance Call
         </a>
         <div class="hero-microcopy reveal">
@@ -681,9 +705,13 @@
       <span class="eyebrow eyebrow-green reveal">See How It Works</span>
       <h2 class="reveal">Watch: How the Bombers Blueprint Works</h2>
       <div class="video-wrap reveal">
-        <!-- Replace this with your Wistia embed code -->
-        <div class="video-placeholder" aria-label="Play video introduction" role="button" tabindex="0">
-          <div class="play-button" aria-hidden="true"></div>
+        <div class="video-embed">
+          <iframe
+            src="https://player.vimeo.com/video/1140529388?title=0&byline=0&portrait=0&pip=1&dnt=1"
+            title="How the Bombers Blueprint Works"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+            allowfullscreen
+            loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -822,7 +850,7 @@
       </div>
 
       <div class="center-cta reveal">
-        <a class="btn" href="https://fairwayperformancevipcoaching.com/bookyourgolfperformancecall">
+        <a class="btn" href="https://fairwayperformance.as.me/30minutediscoverycall">
           Book Your Free Call Now
         </a>
       </div>
@@ -842,8 +870,8 @@
 
       <div class="grid-3">
         <article class="testimonial-card reveal">
-          <div class="video-thumb" role="button" tabindex="0" aria-label="Play Erik's testimonial">
-            <div class="play-button" aria-hidden="true"></div>
+          <div class="video-thumb">
+            <wistia-player media-id="ts90olaac4" aspect="0.5625"></wistia-player>
           </div>
           <span class="badge-pill">+22 yards off the tee</span>
           <p class="quote">I was skeptical at first, but within 8 weeks I'd added over 20 yards to my driver. My back doesn't hurt anymore and I'm playing the best golf of my life.</p>
@@ -852,8 +880,8 @@
         </article>
 
         <article class="testimonial-card reveal">
-          <div class="video-thumb" role="button" tabindex="0" aria-label="Play Rhys's testimonial">
-            <div class="play-button" aria-hidden="true"></div>
+          <div class="video-thumb">
+            <wistia-player media-id="lq28nchwmv" aspect="0.5625"></wistia-player>
           </div>
           <span class="badge-pill">Pain-free after 18 holes</span>
           <p class="quote">For the first time in years, I can play a full round without my lower back locking up.</p>
@@ -862,8 +890,8 @@
         </article>
 
         <article class="testimonial-card reveal">
-          <div class="video-thumb" role="button" tabindex="0" aria-label="Play Chris's testimonial">
-            <div class="play-button" aria-hidden="true"></div>
+          <div class="video-thumb">
+            <wistia-player media-id="uukp3q3u5e" aspect="0.5625"></wistia-player>
           </div>
           <span class="badge-pill">Consistent ball striking</span>
           <p class="quote">The mobility work transformed my swing. I'm hitting it more consistently than I have in 10 years.</p>
@@ -872,8 +900,8 @@
         </article>
 
         <article class="testimonial-card reveal">
-          <div class="video-thumb" role="button" tabindex="0" aria-label="Play Tom's testimonial">
-            <div class="play-button" aria-hidden="true"></div>
+          <div class="video-thumb">
+            <wistia-player media-id="jpy5g1g89v" aspect="0.5625"></wistia-player>
           </div>
           <span class="badge-pill">Finally has a clear plan</span>
           <p class="quote">I stopped wasting time on random exercises. Now every session has a purpose and I can see the progress.</p>
@@ -882,8 +910,8 @@
         </article>
 
         <article class="testimonial-card reveal">
-          <div class="video-thumb" role="button" tabindex="0" aria-label="Play Michael's testimonial">
-            <div class="play-button" aria-hidden="true"></div>
+          <div class="video-thumb">
+            <wistia-player media-id="2wzj7gaw24" aspect="0.5625"></wistia-player>
           </div>
           <span class="badge-pill">More power, less effort</span>
           <p class="quote">My swing feels effortless now. I'm generating more clubhead speed with less strain on my body.</p>
@@ -892,8 +920,8 @@
         </article>
 
         <article class="testimonial-card reveal">
-          <div class="video-thumb" role="button" tabindex="0" aria-label="Play Sean's testimonial">
-            <div class="play-button" aria-hidden="true"></div>
+          <div class="video-thumb">
+            <wistia-player media-id="9u1xdlkqc9" aspect="0.5625"></wistia-player>
           </div>
           <span class="badge-pill">Back in the game</span>
           <p class="quote">I was ready to give up golf because of my hip pain. Now I'm playing 3 times a week pain-free.</p>
@@ -903,7 +931,7 @@
       </div>
 
       <div class="center-cta reveal" style="margin-top:56px;">
-        <a class="btn" href="https://fairwayperformancevipcoaching.com/bookyourgolfperformancecall">
+        <a class="btn" href="https://fairwayperformance.as.me/30minutediscoverycall">
           Join These Golfers — Book Your Free Call
         </a>
       </div>
@@ -917,7 +945,7 @@
     <div class="container">
       <div class="coach-grid">
         <div class="coach-image-wrap reveal">
-          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663434216877/HRLfVC2e3GYPthVLiKfkRh/coach-session-FpHVgn3cjrq69Asn9GCcbn.webp" alt="Coach during a TPI golf fitness session" loading="lazy" />
+          <img src="coach-tpi.jpg" alt="Coach in front of the Titleist Performance Institute, TPI Level 3 Certified Professional" loading="lazy" />
           <div class="credential-badge">TPI Level 3<br/>Certified Professional</div>
         </div>
 
@@ -1055,7 +1083,7 @@
         Book your free Golf Performance Call today. In 30 minutes, you'll have more clarity about your body, your swing, and your path forward than years of guessing on your own.
       </p>
       <div class="reveal">
-        <a class="btn btn-xl btn-pulse" href="https://fairwayperformancevipcoaching.com/bookyourgolfperformancecall">
+        <a class="btn btn-xl btn-pulse" href="https://fairwayperformance.as.me/30minutediscoverycall">
           Book Your Free Call Now
         </a>
       </div>
