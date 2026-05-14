@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Booked In! | Fairway Performance</title>
+  <meta name="description" content="Your Golf Performance Call is confirmed. Learn what to expect on your call and see how the Bombers Blueprint helps golfers add distance and eliminate pain." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Wistia Player (shared loader + per-video media scripts) -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/ts90olaac4.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/lq28nchwmv.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/uukp3q3u5e.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/jpy5g1g89v.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/2wzj7gaw24.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/9u1xdlkqc9.js" async type="module"></script>
+
+  <style>
+    /* ---------- Reset & Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    :root {
+      --green: #0f4c2e;
+      --green-deep: #0b3a23;
+      --gold: #c9a84c;
+      --orange: #f97316;
+      --orange-hover: #ea580c;
+      --black: #1a1a1a;
+      --offwhite: #f9fafb;
+      --cream: #fafaf8;
+      --gray: #4b5563;
+      --gray-light: #e5e7eb;
+      --border: rgba(0,0,0,0.06);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(36px, 5.2vw, 52px); }
+    h2 { font-size: clamp(28px, 3.8vw, 40px); }
+    h3 { font-size: clamp(18px, 1.8vw, 20px); font-weight: 700; }
+
+    .eyebrow {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .eyebrow-green { color: var(--green); }
+    .eyebrow-gold { color: var(--gold); }
+
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .container-faq { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    section { padding: 96px 0; position: relative; }
+    @media (max-width: 768px) { section { padding: 64px 0; } }
+
+    /* ---------- Reveal animations ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 600ms ease-out, transform 600ms ease-out;
+      will-change: opacity, transform;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============================================================
+       SECTION 1 — CONFIRMATION HERO
+       ============================================================ */
+    .hero {
+      padding: 112px 0 96px;
+      text-align: center;
+      color: #fff;
+      background-image:
+        linear-gradient(rgba(15,76,46,0.90), rgba(15,76,46,0.92)),
+        url('https://d2xsxph8kpxj0f.cloudfront.net/310519663434216877/HRLfVC2e3GYPthVLiKfkRh/hero-golf-bg-RXEvvfxSLUcybKZaCZxgMi.webp');
+      background-size: cover;
+      background-position: center;
+    }
+    @media (max-width: 768px) { .hero { padding: 72px 0 64px; } }
+
+    .hero-icon {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      box-shadow: 0 14px 30px rgba(249,115,22,0.4);
+    }
+    .hero h1 { color: #fff; margin-bottom: 18px; }
+    .hero-sub {
+      color: rgba(255,255,255,0.8);
+      font-size: clamp(17px, 1.7vw, 20px);
+      max-width: 640px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .info-box {
+      display: inline-block;
+      max-width: 560px;
+      padding: 22px 28px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      text-align: left;
+    }
+    .info-box .info-label {
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .info-box .info-text {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* ============================================================
+       SECTION 2 — WHAT HAPPENS ON YOUR CALL
+       ============================================================ */
+    .call-section { background: #fff; text-align: center; }
+    .section-sub {
+      color: var(--gray);
+      font-size: 18px;
+      max-width: 640px;
+      margin: 12px auto 0;
+    }
+
+    .timeline {
+      max-width: 720px;
+      margin: 56px auto 0;
+      text-align: left;
+    }
+    .step {
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+      position: relative;
+      padding-bottom: 36px;
+    }
+    .step:last-of-type { padding-bottom: 0; }
+    .step::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 56px;
+      bottom: -6px;
+      width: 2px;
+      background: rgba(249,115,22,0.2);
+    }
+    .step:last-of-type::before { display: none; }
+    .step-num {
+      flex: 0 0 48px;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: #fff;
+      font-weight: 700;
+      font-size: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 18px rgba(249,115,22,0.3);
+      position: relative;
+      z-index: 1;
+    }
+    .step h3 { color: var(--black); margin-bottom: 6px; }
+    .step p { color: var(--gray); font-size: 16.5px; }
+
+    .promise-box {
+      max-width: 720px;
+      margin: 56px auto 0;
+      padding: 32px;
+      background: var(--cream);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 14px;
+      text-align: center;
+    }
+    .promise-shield {
+      width: 44px; height: 44px;
+      color: var(--gold);
+      margin: 0 auto 14px;
+    }
+    .promise-box h3 { font-size: 20px; margin-bottom: 8px; color: var(--black); }
+    .promise-box p { color: var(--gray); font-size: 16px; line-height: 1.6; }
+
+    /* ============================================================
+       SECTION 3 — PROBLEM AGITATION
+       ============================================================ */
+    .problem-section { background: var(--offwhite); text-align: center; }
+    .grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    @media (max-width: 768px) { .grid-2x2 { grid-template-columns: 1fr; } }
+
+    .problem-card {
+      background: #fff;
+      border: 1px solid var(--gray-light);
+      border-radius: 14px;
+      padding: 32px;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .problem-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(15,76,46,0.2);
+    }
+    .icon-circle {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: rgba(15,76,46,0.1);
+      color: var(--green);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .problem-card h3 { color: var(--black); margin-bottom: 10px; }
+    .problem-card p { color: var(--gray); font-size: 16.5px; line-height: 1.65; }
+
+    /* ============================================================
+       SECTION 4 — BOMBERS BLUEPRINT (DARK)
+       ============================================================ */
+    .solution-section {
+      background-image:
+        linear-gradient(rgba(15,76,46,0.95), rgba(15,76,46,0.95)),
+        url('https://d2xsxph8kpxj0f.cloudfront.net/310519663434216877/HRLfVC2e3GYPthVLiKfkRh/golf-texture-dark-6uheaLUdxSG3rPPnJ2ogCK.webp');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+    }
+    .solution-section h2 { color: #fff; }
+    .solution-section .section-sub { color: rgba(255,255,255,0.7); }
+
+    .solution-card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 32px;
+      transition: transform .3s ease, background .3s ease, border-color .3s ease;
+    }
+    .solution-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(201,168,76,0.4);
+    }
+    .pillar-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .solution-card h3 { color: #fff; margin-bottom: 8px; }
+    .solution-card p { color: rgba(255,255,255,0.7); font-size: 16px; }
+
+    /* ============================================================
+       SECTION 5 — TESTIMONIALS
+       ============================================================ */
+    .testimonials-section { background: #fff; text-align: center; }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+      text-align: left;
+    }
+    @media (max-width: 1024px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px)  { .grid-3 { grid-template-columns: 1fr; } }
+
+    .testimonial-card {
+      background: var(--cream);
+      border: 1px solid var(--gray-light);
+      border-radius: 14px;
+      padding: 28px;
+      transition: transform .3s ease, box-shadow .3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(15,76,46,0.2);
+    }
+    /* Vertical 9:16 Wistia container — fits Reels-format videos cleanly inside the card */
+    .video-thumb {
+      aspect-ratio: 9 / 16;
+      max-width: 240px;
+      margin: 0 auto 18px;
+      background: var(--green-deep);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 24px -10px rgba(15,76,46,0.35);
+    }
+    .video-thumb wistia-player {
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+    }
+    /* Wistia placeholder thumbnails before player hydrates */
+    wistia-player:not(:defined) { display: block; filter: blur(5px); background-size: cover; background-position: center; }
+    wistia-player[media-id='ts90olaac4']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/ts90olaac4/swatch'); }
+    wistia-player[media-id='lq28nchwmv']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/lq28nchwmv/swatch'); }
+    wistia-player[media-id='uukp3q3u5e']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/uukp3q3u5e/swatch'); }
+    wistia-player[media-id='jpy5g1g89v']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/jpy5g1g89v/swatch'); }
+    wistia-player[media-id='2wzj7gaw24']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/2wzj7gaw24/swatch'); }
+    wistia-player[media-id='9u1xdlkqc9']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/9u1xdlkqc9/swatch'); }
+
+    .badge-pill {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      padding: 5px 13px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .quote {
+      font-style: italic;
+      font-size: 16px;
+      color: #374151;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .quote::before { content: '"'; }
+    .quote::after  { content: '"'; }
+    .divider { border-top: 1px solid var(--gray-light); padding-top: 14px; }
+    .person-name { font-weight: 700; color: var(--black); font-size: 16px; }
+    .person-detail { color: #6b7280; font-size: 14px; margin-top: 2px; }
+
+    /* ============================================================
+       SECTION 6 — MEET YOUR COACH
+       ============================================================ */
+    .coach-section { background: var(--offwhite); }
+    .coach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    @media (max-width: 900px) { .coach-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+    .coach-image-wrap { position: relative; }
+    .coach-image-wrap img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 30px 60px -20px rgba(15,76,46,0.35);
+    }
+    .credential-badge {
+      position: absolute;
+      right: -8px;
+      bottom: -16px;
+      background: var(--green);
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 12px;
+      box-shadow: 0 14px 30px -10px rgba(15,76,46,0.45);
+      border: 2px solid var(--gold);
+      max-width: 260px;
+    }
+    .credential-badge .cb-title { font-size: 18px; font-weight: 700; line-height: 1.2; }
+    .credential-badge .cb-sub { color: rgba(255,255,255,0.75); font-size: 13.5px; margin-top: 2px; }
+    @media (max-width: 480px) {
+      .credential-badge { right: 12px; bottom: -12px; padding: 10px 16px; }
+      .credential-badge .cb-title { font-size: 15px; }
+      .credential-badge .cb-sub { font-size: 12px; }
+    }
+
+    .coach-text h2 { color: var(--black); margin-bottom: 18px; }
+    .coach-text p { color: #374151; margin-bottom: 16px; font-size: 17px; line-height: 1.7; }
+
+    .credential-list { list-style: none; margin-top: 24px; }
+    .credential-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 7px 0;
+      color: var(--black);
+      font-weight: 500;
+    }
+    .check-circle {
+      flex: 0 0 22px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4px;
+    }
+
+    /* ============================================================
+       SECTION 7 — FAQ
+       ============================================================ */
+    .faq-section { background: #fff; text-align: center; }
+    .faq-list {
+      margin-top: 48px;
+      text-align: left;
+    }
+    .faq-item { border-bottom: 1px solid var(--gray-light); }
+    .faq-item:first-of-type { border-top: 1px solid var(--gray-light); }
+    .faq-q {
+      width: 100%;
+      background: transparent;
+      border: 0;
+      text-align: left;
+      padding: 20px 8px;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--black);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+    }
+    .faq-q:hover { color: var(--green); }
+    .faq-chevron { flex: 0 0 20px; color: var(--green); transition: transform .3s ease; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+    .faq-a-inner { padding: 0 8px 22px; color: var(--gray); font-size: 16px; line-height: 1.7; }
+
+    /* ============================================================
+       SECTION 8 — CLOSING
+       ============================================================ */
+    .closing-section {
+      background-image:
+        linear-gradient(rgba(15,76,46,0.95), rgba(11,58,35,0.97)),
+        url('https://d2xsxph8kpxj0f.cloudfront.net/310519663434216877/HRLfVC2e3GYPthVLiKfkRh/golf-texture-dark-6uheaLUdxSG3rPPnJ2ogCK.webp');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+    }
+    .closing-section h2 {
+      color: #fff;
+      font-size: clamp(32px, 4.4vw, 48px);
+      max-width: 820px;
+      margin: 0 auto 22px;
+    }
+    .closing-body {
+      color: rgba(255,255,255,0.8);
+      font-size: clamp(17px, 1.6vw, 20px);
+      max-width: 640px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .reminder-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 28px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      text-align: left;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .reminder-icon { flex: 0 0 32px; color: var(--gold); }
+    .reminder-text .rt-title {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .reminder-text .rt-sub {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+    @media (max-width: 480px) {
+      .reminder-box { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+
+  </style>
+
+  <!-- Hyros Tracking Pixel — fires on every page load so Hyros sees the thank-you visit as a conversion -->
+  <script>
+    var head = document.head;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = "https://t.fairwayperformance.com/v1/lst/universal-script?ph=a6fd5ed58e0eb834a37dd8eb12e3c0cf62f2a218d69340bbcba058df9c0d6fef&tag=!clicked&ref_url=" + encodeURI(document.URL);
+    head.appendChild(script);
+  </script>
+</head>
+<body>
+
+  <!-- =================================================================
+       SECTION 1 — CONFIRMATION HERO
+       ================================================================= -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-icon reveal" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+          <polyline points="9 16 11 18 15 14"/>
+        </svg>
+      </div>
+      <h1 class="reveal">You're Booked In!</h1>
+      <p class="hero-sub reveal">
+        Your Golf Performance Call is confirmed. Check your email for the calendar invite and call details.
+      </p>
+      <div class="info-box reveal">
+        <div class="info-label">What to Do Next</div>
+        <div class="info-text">Read below so you're prepared for your call</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SECTION 2 — WHAT HAPPENS ON YOUR CALL
+       ================================================================= -->
+  <section class="call-section">
+    <div class="container-narrow">
+      <span class="eyebrow eyebrow-green reveal">Your Free Call</span>
+      <h2 class="reveal">Here's Exactly What Happens on Your Call</h2>
+      <p class="section-sub reveal">
+        This isn't a high-pressure sales pitch. It's a genuine strategy session designed to give you clarity.
+      </p>
+
+      <div class="timeline">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <div>
+            <h3>We'll Learn About You</h3>
+            <p>Your current game, your goals, your physical limitations, and what you've tried before. Come ready to share honestly — the more we know, the better we can help.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <div>
+            <h3>We'll Identify Your Biggest Bottleneck</h3>
+            <p>We'll pinpoint the #1 thing holding back your distance, mobility, or consistency — and explain exactly why it's happening.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <div>
+            <h3>We'll Map Out Your Path Forward</h3>
+            <p>You'll leave with a clear understanding of what needs to happen to get results — whether you work with us or not.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">4</div>
+          <div>
+            <h3>We'll Discuss If We're a Fit</h3>
+            <p>If it makes sense, we'll explain how coaching works. If not, no worries — you still walk away with a plan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="promise-box reveal">
+        <svg class="promise-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <h3>Our Promise</h3>
+        <p>Even if you never become a client, you'll leave this call with more clarity about your golf fitness than you've ever had.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SECTION 3 — PROBLEM AGITATION
+       ================================================================= -->
+  <section class="problem-section">
+    <div class="container">
+      <h2 class="reveal">Sound Familiar?</h2>
+      <p class="section-sub reveal">These are the exact frustrations our clients had before they started the Bombers Blueprint.</p>
+
+      <div class="grid-2x2">
+        <div class="problem-card reveal">
+          <div class="icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+          </div>
+          <h3>Losing Distance Every Year</h3>
+          <p>You used to bomb it past your mates. Now you're watching them outdrive you and wondering where those extra yards went.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+          </div>
+          <h3>Playing Through Pain</h3>
+          <p>Your lower back screams after 9 holes. Your hips feel locked. You're popping ibuprofen just to finish a round.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3>No Clear Training Plan</h3>
+          <p>You've tried random YouTube exercises, gym routines that aren't golf-specific, and "tips" that never stick.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Wasting Time on the Wrong Things</h3>
+          <p>You're putting in effort but not seeing results on the course. Something isn't connecting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SECTION 4 — BOMBERS BLUEPRINT (SOLUTION)
+       ================================================================= -->
+  <section class="solution-section">
+    <div class="container">
+      <span class="eyebrow eyebrow-gold reveal">The Program</span>
+      <h2 class="reveal">The Bombers Blueprint</h2>
+      <p class="section-sub reveal">
+        A TPI-driven, fully personalized training system that addresses the root cause of your distance loss and pain — not just the symptoms.
+      </p>
+
+      <div class="grid-2x2">
+        <div class="solution-card reveal">
+          <div class="pillar-num">01</div>
+          <h3>TPI Movement Screen</h3>
+          <p>We identify exactly where your body is limiting your swing, so every exercise has a purpose.</p>
+        </div>
+        <div class="solution-card reveal">
+          <div class="pillar-num">02</div>
+          <h3>Personalized Training Program</h3>
+          <p>Built around YOUR body, YOUR schedule, and YOUR goals. No cookie-cutter templates.</p>
+        </div>
+        <div class="solution-card reveal">
+          <div class="pillar-num">03</div>
+          <h3>Progressive Overload for Golfers</h3>
+          <p>Structured programming that builds strength and mobility week over week, so you keep improving.</p>
+        </div>
+        <div class="solution-card reveal">
+          <div class="pillar-num">04</div>
+          <h3>Ongoing Coaching &amp; Accountability</h3>
+          <p>Direct access to a TPI-certified coach who adjusts your plan as you progress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SECTION 5 — TESTIMONIALS
+       ================================================================= -->
+  <section class="testimonials-section">
+    <div class="container">
+      <span class="eyebrow eyebrow-green reveal">Results</span>
+      <h2 class="reveal">Real Golfers. Real Results.</h2>
+      <p class="section-sub reveal">These golfers were in your exact position. Here's what happened after they joined.</p>
+
+      <div class="grid-3">
+        <article class="testimonial-card reveal">
+          <div class="video-thumb">
+            <wistia-player media-id="ts90olaac4" aspect="0.5625"></wistia-player>
+          </div>
+          <span class="badge-pill">+22 yards off the tee</span>
+          <p class="quote">I was skeptical at first, but within 8 weeks I'd added over 20 yards to my driver. My back doesn't hurt anymore and I'm playing the best golf of my life.</p>
+          <div class="divider">
+            <div class="person-name">Erik</div>
+            <div class="person-detail">Age 47 | Handicap: 12 → 8</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb">
+            <wistia-player media-id="lq28nchwmv" aspect="0.5625"></wistia-player>
+          </div>
+          <span class="badge-pill">Pain-free after 18 holes</span>
+          <p class="quote">For the first time in years, I can play a full round without my lower back locking up.</p>
+          <div class="divider">
+            <div class="person-name">Rhys</div>
+            <div class="person-detail">Age 52 | Member for 6 months</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb">
+            <wistia-player media-id="uukp3q3u5e" aspect="0.5625"></wistia-player>
+          </div>
+          <span class="badge-pill">Consistent ball striking</span>
+          <p class="quote">The mobility work transformed my swing. I'm hitting it more consistently than I have in 10 years.</p>
+          <div class="divider">
+            <div class="person-name">Chris</div>
+            <div class="person-detail">Age 41 | Gained 15 yards</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb">
+            <wistia-player media-id="jpy5g1g89v" aspect="0.5625"></wistia-player>
+          </div>
+          <span class="badge-pill">Finally has a clear plan</span>
+          <p class="quote">I stopped wasting time on random exercises. Now every session has a purpose and I can see the progress.</p>
+          <div class="divider">
+            <div class="person-name">Tom</div>
+            <div class="person-detail">Age 55 | Playing best golf in years</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb">
+            <wistia-player media-id="2wzj7gaw24" aspect="0.5625"></wistia-player>
+          </div>
+          <span class="badge-pill">More power, less effort</span>
+          <p class="quote">My swing feels effortless now. I'm generating more clubhead speed with less strain on my body.</p>
+          <div class="divider">
+            <div class="person-name">Michael</div>
+            <div class="person-detail">Age 49 | Gained 18 yards</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb">
+            <wistia-player media-id="9u1xdlkqc9" aspect="0.5625"></wistia-player>
+          </div>
+          <span class="badge-pill">Back in the game</span>
+          <p class="quote">I was ready to give up golf because of my hip pain. Now I'm playing 3 times a week pain-free.</p>
+          <div class="divider">
+            <div class="person-name">Sean</div>
+            <div class="person-detail">Age 58 | Pain-free for 4 months</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SECTION 6 — MEET YOUR COACH
+       ================================================================= -->
+  <section class="coach-section">
+    <div class="container">
+      <div class="coach-grid">
+        <div class="coach-image-wrap reveal">
+          <img src="coach-tpi.JPG" alt="Coach in front of the Titleist Performance Institute, TPI Level 3 Certified Professional" loading="lazy" />
+          <div class="credential-badge">
+            <div class="cb-title">TPI Level 3</div>
+            <div class="cb-sub">Certified Professional</div>
+          </div>
+        </div>
+        <div class="coach-text">
+          <span class="eyebrow eyebrow-green reveal">Your Coach</span>
+          <h2 class="reveal">Meet Your Coach</h2>
+          <p class="reveal">With years of experience in golf-specific fitness and a deep understanding of the TPI methodology, I've helped golfers worldwide reclaim their distance, eliminate pain, and fall back in love with the game.</p>
+          <p class="reveal">I'm not a generic personal trainer who happens to play golf. Every program I build is rooted in the Titleist Performance Institute's research on how the body moves in the golf swing.</p>
+
+          <ul class="credential-list reveal">
+            <li>
+              <span class="check-circle" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              TPI Certified Fitness Professional (Level 3)
+            </li>
+            <li>
+              <span class="check-circle" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Golfers coached worldwide
+            </li>
+            <li>
+              <span class="check-circle" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Specializing in golfers aged 35–55
+            </li>
+            <li>
+              <span class="check-circle" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Online coaching with video demonstrations
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SECTION 7 — FAQ
+       ================================================================= -->
+  <section class="faq-section">
+    <div class="container-faq">
+      <h2 class="reveal">Common Questions</h2>
+      <p class="section-sub reveal">Everything you might be wondering before your call.</p>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Is this call really free? What's the catch?</span>
+            <span class="faq-chevron" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Yes, it's 100% free. The "catch" is that we genuinely want to help you — and if we can show you the path forward, some people choose to work with us long-term. But there's zero obligation.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>I'm not in great shape. Is this program for me?</span>
+            <span class="faq-chevron" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Absolutely. We work with golfers at every fitness level. Your Bombers Blueprint is built around where YOU are right now — not where someone else is. We meet you where you're at.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>How is this different from a regular personal trainer?</span>
+            <span class="faq-chevron" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Most personal trainers don't understand the golf swing. We use the TPI movement screen to identify exactly which physical limitations are affecting YOUR swing, then build a program that directly addresses those issues. Every exercise connects back to your game.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>I don't have much time to train. Will this still work?</span>
+            <span class="faq-chevron" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Most of our clients train 3–4 times per week for 30–45 minutes. The key isn't volume — it's doing the RIGHT exercises for YOUR body. Quality over quantity.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Do I need to be local or can this work remotely?</span>
+            <span class="faq-chevron" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">We work with golfers worldwide. Everything is delivered online with video demonstrations, check-ins, and direct coaching access.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>What if I've tried other programs before and they didn't work?</span>
+            <span class="faq-chevron" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">That's actually the most common thing we hear. The difference is that those programs weren't built specifically for YOUR body and YOUR swing limitations. The TPI movement screen identifies what's actually holding you back, so we fix the root cause — not just throw generic exercises at you.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SECTION 8 — CLOSING
+       ================================================================= -->
+  <section class="closing-section">
+    <div class="container">
+      <h2 class="reveal">We're Looking Forward to Your Call</h2>
+      <p class="closing-body reveal">
+        In the meantime, think about what you'd most like to improve — distance, pain, consistency, or all three. The more specific you are on the call, the more we can help.
+      </p>
+      <div class="reminder-box reveal">
+        <svg class="reminder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        <div class="reminder-text">
+          <div class="rt-title">Check your email for your confirmation</div>
+          <div class="rt-sub">Add the call to your calendar so you don't miss it</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       JAVASCRIPT
+       ================================================================= -->
+  <script>
+    // ---------- Scroll Reveal (Intersection Observer) ----------
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('.reveal');
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+
+      // Stagger siblings within shared parents
+      var staggerMap = new Map();
+      els.forEach(function (el) {
+        var p = el.parentElement;
+        if (!staggerMap.has(p)) staggerMap.set(p, []);
+        staggerMap.get(p).push(el);
+      });
+      staggerMap.forEach(function (siblings) {
+        siblings.forEach(function (el, idx) { el.dataset.staggerIndex = idx; });
+      });
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            var idx = parseInt(el.dataset.staggerIndex || '0', 10);
+            var delay = Math.min(idx * 150, 750);
+            el.style.transitionDelay = delay + 'ms';
+            el.classList.add('is-visible');
+            io.unobserve(el);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      els.forEach(function (el) { io.observe(el); });
+    })();
+
+    // ---------- FAQ Accordion ----------
+    (function () {
+      var items = document.querySelectorAll('.faq-item');
+      items.forEach(function (item) {
+        var btn = item.querySelector('.faq-q');
+        var ans = item.querySelector('.faq-a');
+        btn.addEventListener('click', function () {
+          var isOpen = item.classList.contains('open');
+          items.forEach(function (other) {
+            if (other !== item) {
+              other.classList.remove('open');
+              var oa = other.querySelector('.faq-a');
+              var ob = other.querySelector('.faq-q');
+              if (oa) oa.style.maxHeight = null;
+              if (ob) ob.setAttribute('aria-expanded', 'false');
+            }
+          });
+          if (isOpen) {
+            item.classList.remove('open');
+            ans.style.maxHeight = null;
+            btn.setAttribute('aria-expanded', 'false');
+          } else {
+            item.classList.add('open');
+            ans.style.maxHeight = ans.scrollHeight + 'px';
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
