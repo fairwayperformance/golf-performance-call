@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Self-Assessment Videos | Fairway Performance</title>
+  <meta name="description" content="Your golf mobility self-assessment videos. Run through these 4 tests to find what's limiting your swing — or book a free call and have us assess you directly." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Wistia Player (testimonials) -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/ts90olaac4.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/lq28nchwmv.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/uukp3q3u5e.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/jpy5g1g89v.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/2wzj7gaw24.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/9u1xdlkqc9.js" async type="module"></script>
+  <style>
+    wistia-player:not(:defined) { display: block; filter: blur(5px); background-size: cover; background-position: center; }
+    wistia-player[media-id='ts90olaac4']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/ts90olaac4/swatch'); }
+    wistia-player[media-id='lq28nchwmv']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/lq28nchwmv/swatch'); }
+    wistia-player[media-id='uukp3q3u5e']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/uukp3q3u5e/swatch'); }
+    wistia-player[media-id='jpy5g1g89v']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/jpy5g1g89v/swatch'); }
+    wistia-player[media-id='2wzj7gaw24']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/2wzj7gaw24/swatch'); }
+    wistia-player[media-id='9u1xdlkqc9']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/9u1xdlkqc9/swatch'); }
+  </style>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 18px; line-height: 1.7; color: #1a1a1a; background: #fff;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    :root {
+      --green: #0f4c2e; --green-deep: #0b3a23;
+      --gold: #c9a84c; --orange: #f97316; --orange-hover: #ea580c;
+      --black: #1a1a1a; --offwhite: #f9fafb; --white: #fff;
+      --gray: #4b5563; --card-bg: #fafaf8; --border: rgba(0,0,0,0.06);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 800; line-height: 1.15; letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(36px, 5.2vw, 56px); }
+    h2 { font-size: clamp(28px, 4vw, 44px); }
+    h3 { font-size: clamp(20px, 2vw, 24px); font-weight: 700; }
+
+    .eyebrow {
+      display: inline-block; font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .eyebrow-gold { color: var(--gold); }
+    .eyebrow-green { color: var(--green); }
+
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 96px 0; position: relative; }
+    @media (max-width: 768px) { section { padding: 64px 0; } }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 10px; padding: 20px 44px; background: var(--orange); color: #fff !important;
+      font-weight: 700; font-size: 16px; letter-spacing: 0.06em; text-transform: uppercase;
+      border-radius: 8px;
+      box-shadow: 0 10px 24px rgba(249,115,22,0.25), 0 2px 6px rgba(0,0,0,0.08);
+      transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease;
+      text-align: center; line-height: 1.2;
+    }
+    .btn:hover {
+      background: var(--orange-hover); transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(249,115,22,0.35), 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .btn-xl { padding: 24px 56px; font-size: 19px; }
+    .btn-ghost {
+      background: transparent; border: 2px solid rgba(255,255,255,0.5);
+      color: #fff !important; box-shadow: none;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: #fff; }
+
+    /* Reveal animations */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity .6s ease-out, transform .6s ease-out;
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============================================================
+       SECTION 1 — CONFIRMATION HERO
+       ============================================================ */
+    .hero {
+      padding: 120px 0 96px; text-align: center; color: #fff;
+      background-image:
+        linear-gradient(rgba(15,76,46,0.90), rgba(15,76,46,0.92)),
+        url('https://d2xsxph8kpxj0f.cloudfront.net/310519663434216877/HRLfVC2e3GYPthVLiKfkRh/hero-golf-bg-RXEvvfxSLUcybKZaCZxgMi.webp');
+      background-size: cover; background-position: center;
+    }
+    @media (max-width: 768px) { .hero { padding: 80px 0 64px; } }
+    .hero-icon {
+      width: 76px; height: 76px; border-radius: 50%;
+      background: var(--orange); color: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin: 0 auto 26px;
+      box-shadow: 0 14px 30px rgba(249,115,22,0.4);
+    }
+    .hero h1 { color: #fff; margin-bottom: 16px; }
+    .hero h1 .gold { color: var(--gold); display: block; }
+    .hero-sub {
+      color: rgba(255,255,255,0.82); font-size: clamp(17px, 1.6vw, 20px);
+      max-width: 680px; margin: 0 auto 32px; line-height: 1.6;
+    }
+    .hero-row {
+      display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+      margin-top: 8px;
+    }
+    @media (max-width: 480px) {
+      .hero-row { width: 100%; flex-direction: column; }
+      .hero-row .btn { width: 100%; }
+    }
+    .hero-microcopy {
+      color: rgba(255,255,255,0.55); font-size: 14px; margin-top: 22px;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+
+    /* ============================================================
+       SECTION 2 — VSL
+       ============================================================ */
+    .vsl-section { background: var(--offwhite); text-align: center; }
+    .vsl-wrap {
+      margin-top: 36px; border-radius: 14px; overflow: hidden;
+      box-shadow: 0 30px 60px -20px rgba(15,76,46,0.25), 0 8px 24px rgba(0,0,0,0.08);
+      max-width: 900px; margin-left: auto; margin-right: auto;
+    }
+    .video-embed {
+      position: relative; aspect-ratio: 16 / 9;
+      background: var(--green-deep); border-radius: 14px; overflow: hidden;
+    }
+    .video-embed iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+    }
+    .vsl-section .section-sub {
+      color: var(--gray); font-size: 18px; max-width: 640px;
+      margin: 12px auto 0;
+    }
+
+    /* ============================================================
+       SECTION 3 — 4 SELF-ASSESSMENT VIDEOS
+       ============================================================ */
+    .assess-section { background: var(--white); text-align: center; }
+    .assess-section .section-sub {
+      color: var(--gray); font-size: 18px; max-width: 720px;
+      margin: 12px auto 0;
+    }
+    .assess-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 32px; margin-top: 56px; text-align: left;
+    }
+    @media (max-width: 768px) { .assess-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+    .assess-card {
+      background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .assess-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(15,76,46,0.18);
+    }
+    .assess-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(15,76,46,0.1); color: var(--green);
+      font-weight: 700; font-size: 16px;
+      margin-bottom: 14px;
+    }
+    .assess-card h3 { color: var(--black); margin-bottom: 12px; }
+    .assess-card p { color: var(--gray); font-size: 16px; line-height: 1.6; margin-top: 14px; }
+    .assess-video {
+      position: relative; aspect-ratio: 16/9;
+      border-radius: 10px; overflow: hidden;
+      background: var(--green-deep);
+    }
+    .assess-video iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+    }
+
+    /* ============================================================
+       SECTION 4 — TESTIMONIALS
+       ============================================================ */
+    .testimonials-section { background: var(--offwhite); text-align: center; }
+    .section-sub {
+      color: var(--gray); font-size: 18px; max-width: 640px;
+      margin: 12px auto 0;
+    }
+    .grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-top: 56px; text-align: left;
+    }
+    @media (max-width: 1024px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px)  { .grid-3 { grid-template-columns: 1fr; } }
+
+    .testimonial-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 14px; padding: 28px;
+      transition: transform .3s ease, box-shadow .3s ease;
+      display: flex; flex-direction: column;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(15,76,46,0.2);
+    }
+    .video-thumb {
+      aspect-ratio: 9 / 16; max-width: 240px;
+      margin: 0 auto 18px;
+      background: var(--green-deep); border-radius: 10px; overflow: hidden;
+      box-shadow: 0 10px 24px -10px rgba(15,76,46,0.35);
+    }
+    .video-thumb wistia-player {
+      width: 100% !important; height: 100% !important; display: block;
+    }
+    .badge-pill {
+      display: inline-block; background: var(--green); color: #fff;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.03em;
+      padding: 5px 13px; border-radius: 999px; margin-bottom: 14px;
+    }
+    .quote {
+      font-style: italic; font-size: 16px; color: #374151;
+      line-height: 1.6; margin-bottom: 16px; flex: 1;
+    }
+    .quote::before { content: '"'; }
+    .quote::after { content: '"'; }
+    .divider { border-top: 1px solid #e5e7eb; padding-top: 14px; }
+    .person-name { font-weight: 700; color: var(--black); font-size: 16px; }
+    .person-detail { color: #6b7280; font-size: 14px; margin-top: 2px; }
+
+    /* ============================================================
+       SECTION 5 — FINAL CTA
+       ============================================================ */
+    .final-cta {
+      background-image:
+        linear-gradient(rgba(15,76,46,0.95), rgba(11,58,35,0.97)),
+        url('https://d2xsxph8kpxj0f.cloudfront.net/310519663434216877/HRLfVC2e3GYPthVLiKfkRh/golf-texture-dark-6uheaLUdxSG3rPPnJ2ogCK.webp');
+      background-size: cover; background-position: center;
+      color: #fff; text-align: center;
+    }
+    .final-cta h2 {
+      color: #fff; font-size: clamp(30px, 4.4vw, 48px);
+      max-width: 800px; margin: 0 auto 22px;
+    }
+    .final-cta p {
+      color: rgba(255,255,255,0.8); font-size: clamp(17px, 1.6vw, 20px);
+      max-width: 640px; margin: 0 auto 36px;
+    }
+    .final-microcopy {
+      color: rgba(255,255,255,0.5); font-size: 13px; margin-top: 22px;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .gold-line { width: 56px; height: 2px; background: var(--gold); margin: 0 auto 24px; }
+  </style>
+
+  <!-- Hyros Tracking Pixel -->
+  <script>
+    var head = document.head;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = "https://t.fairwayperformance.com/v1/lst/universal-script?ph=a6fd5ed58e0eb834a37dd8eb12e3c0cf62f2a218d69340bbcba058df9c0d6fef&tag=!clicked&ref_url=" + encodeURI(document.URL);
+    head.appendChild(script);
+  </script>
+</head>
+<body>
+
+  <!-- ===== SECTION 1 — Confirmation Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-icon reveal" aria-hidden="true">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h1 class="reveal">
+        Your Self-Assessment Videos
+        <span class="gold">Are Below</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Thanks for submitting — a copy of these is on its way to your inbox. In the meantime, watch the short video below to learn what to look for, then run through the 4 mobility tests yourself.
+      </p>
+
+      <div class="hero-row reveal">
+        <a class="btn" href="https://fairwayperformance.as.me/30minutediscoverycall">
+          Skip Ahead — Book a Free Call
+        </a>
+      </div>
+      <div class="hero-microcopy reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Rather have us assess you directly? Book a 30-min call — no obligation.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2 — VSL ===== -->
+  <section class="vsl-section">
+    <div class="container-narrow">
+      <span class="eyebrow eyebrow-green reveal">Watch First</span>
+      <h2 class="reveal">Why These 4 Tests Matter</h2>
+      <p class="section-sub reveal">
+        Before you run the assessment, watch this short video so you know exactly what to look for and what your results mean.
+      </p>
+
+      <div class="vsl-wrap reveal">
+        <div class="video-embed">
+          <iframe
+            src="https://player.vimeo.com/video/1140529388?title=0&byline=0&portrait=0&pip=1&dnt=1"
+            title="Why these 4 self-assessment tests matter"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3 — 4 Self-Assessment Videos ===== -->
+  <section class="assess-section">
+    <div class="container">
+      <span class="eyebrow eyebrow-green reveal">Your Self-Assessment</span>
+      <h2 class="reveal">Run Through These 4 Mobility Tests</h2>
+      <p class="section-sub reveal">
+        Watch each video, follow along, and note where you feel limited. The test you struggle with most is the one we want to talk about on your call.
+      </p>
+
+      <div class="assess-grid">
+        <div class="assess-card reveal">
+          <div class="assess-video">
+            <iframe
+              src="https://www.youtube.com/embed/fN7cp1-enOU?rel=0&modestbranding=1&start=3"
+              title="Self-Assessment Test 1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+          <div class="assess-num">1</div>
+          <h3>Thoracic Rotation Test</h3>
+          <p>Tests upper-back mobility — the rotation engine of your swing. Limited here caps your turn, kills clubhead speed, and forces the lower back to compensate (and complain).</p>
+        </div>
+
+        <div class="assess-card reveal">
+          <div class="assess-video">
+            <iframe
+              src="https://www.youtube.com/embed/OT99xMCigeI?rel=0&modestbranding=1"
+              title="Self-Assessment Test 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+          <div class="assess-num">2</div>
+          <h3>Shoulder External Rotation Test</h3>
+          <p>Tests how far your shoulders can rotate externally — the move that loads the backswing. Limited here means a shortened turn, lost speed, and inconsistent strike.</p>
+        </div>
+
+        <div class="assess-card reveal">
+          <div class="assess-video">
+            <iframe
+              src="https://www.youtube.com/embed/OcCwV_upX5s?rel=0&modestbranding=1"
+              title="Self-Assessment Test 3"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+          <div class="assess-num">3</div>
+          <h3>Internal Hip Rotation Test</h3>
+          <p>Tests your hips' ability to rotate inward — critical for the downswing. Limited internal rotation is one of the biggest hidden causes of lower-back pain in golfers over 35.</p>
+        </div>
+
+        <div class="assess-card reveal">
+          <div class="assess-video">
+            <iframe
+              src="https://www.youtube.com/embed/bgPUgUq0PGY?rel=0&modestbranding=1&start=2"
+              title="Self-Assessment Test 4"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+          <div class="assess-num">4</div>
+          <h3>Dissociation Tests</h3>
+          <p>Tests your ability to move upper body and lower body independently. Poor dissociation means hips and shoulders fire together — power leaks out, consistency falls apart.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4 — Testimonials ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <span class="eyebrow eyebrow-green reveal">Real Results</span>
+      <h2 class="reveal">Golfers Who Took the Next Step</h2>
+      <p class="section-sub reveal">
+        Each of these started right where you are now — running through the same 4 tests. Here's what happened after they booked a call.
+      </p>
+
+      <div class="grid-3">
+        <article class="testimonial-card reveal">
+          <div class="video-thumb"><wistia-player media-id="ts90olaac4" aspect="0.5625"></wistia-player></div>
+          <span class="badge-pill">+22 yards off the tee</span>
+          <p class="quote">I was skeptical at first, but within 8 weeks I'd added over 20 yards to my driver. My back doesn't hurt anymore and I'm playing the best golf of my life.</p>
+          <div class="divider">
+            <div class="person-name">Erik</div>
+            <div class="person-detail">Age 47 | Handicap: 12 → 8</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb"><wistia-player media-id="lq28nchwmv" aspect="0.5625"></wistia-player></div>
+          <span class="badge-pill">Pain-free after 18 holes</span>
+          <p class="quote">For the first time in years, I can play a full round without my lower back locking up.</p>
+          <div class="divider">
+            <div class="person-name">Rhys</div>
+            <div class="person-detail">Age 52 | Member for 6 months</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb"><wistia-player media-id="uukp3q3u5e" aspect="0.5625"></wistia-player></div>
+          <span class="badge-pill">Consistent ball striking</span>
+          <p class="quote">The mobility work transformed my swing. I'm hitting it more consistently than I have in 10 years.</p>
+          <div class="divider">
+            <div class="person-name">Chris</div>
+            <div class="person-detail">Age 41 | Gained 15 yards</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb"><wistia-player media-id="jpy5g1g89v" aspect="0.5625"></wistia-player></div>
+          <span class="badge-pill">Finally has a clear plan</span>
+          <p class="quote">I stopped wasting time on random exercises. Now every session has a purpose and I can see the progress.</p>
+          <div class="divider">
+            <div class="person-name">Tom</div>
+            <div class="person-detail">Age 55 | Playing best golf in years</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb"><wistia-player media-id="2wzj7gaw24" aspect="0.5625"></wistia-player></div>
+          <span class="badge-pill">More power, less effort</span>
+          <p class="quote">My swing feels effortless now. I'm generating more clubhead speed with less strain on my body.</p>
+          <div class="divider">
+            <div class="person-name">Michael</div>
+            <div class="person-detail">Age 49 | Gained 18 yards</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb"><wistia-player media-id="9u1xdlkqc9" aspect="0.5625"></wistia-player></div>
+          <span class="badge-pill">Back in the game</span>
+          <p class="quote">I was ready to give up golf because of my hip pain. Now I'm playing 3 times a week pain-free.</p>
+          <div class="divider">
+            <div class="person-name">Sean</div>
+            <div class="person-detail">Age 58 | Pain-free for 4 months</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5 — Final CTA ===== -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="gold-line reveal"></div>
+      <h2 class="reveal">Want Us to Assess You Directly?</h2>
+      <p class="reveal">
+        Book a free 30-minute Golf Performance Call and we'll pinpoint your biggest mobility limitation and map out a clear plan to fix it. No pressure, no pitch — just clarity.
+      </p>
+      <div class="reveal">
+        <a class="btn btn-xl" href="https://fairwayperformance.as.me/30minutediscoverycall">
+          Book Your Free Golf Performance Call
+        </a>
+      </div>
+      <div class="final-microcopy reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        No obligation. No pressure. Just a clear plan for better golf.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var staggerMap = new Map();
+      els.forEach(function (el) {
+        var p = el.parentElement;
+        if (!staggerMap.has(p)) staggerMap.set(p, []);
+        staggerMap.get(p).push(el);
+      });
+      staggerMap.forEach(function (siblings) {
+        siblings.forEach(function (el, idx) { el.dataset.staggerIndex = idx; });
+      });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            var idx = parseInt(el.dataset.staggerIndex || '0', 10);
+            var delay = Math.min(idx * 100, 600);
+            el.style.transitionDelay = delay + 'ms';
+            el.classList.add('is-visible');
+            io.unobserve(el);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Golf Mobility Self-Assessment | Fairway Performance</title>
+  <meta name="description" content="See what area of your body is limiting your swing in less than 5 minutes. Free TPI-driven mobility self-assessment for golfers over 35." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Wistia Player (for testimonial videos) -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/ts90olaac4.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/lq28nchwmv.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/uukp3q3u5e.js" async type="module"></script>
+  <style>
+    wistia-player:not(:defined) { display: block; filter: blur(5px); background-size: cover; background-position: center; }
+    wistia-player[media-id='ts90olaac4']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/ts90olaac4/swatch'); }
+    wistia-player[media-id='lq28nchwmv']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/lq28nchwmv/swatch'); }
+    wistia-player[media-id='uukp3q3u5e']:not(:defined) { background-image: url('https://fast.wistia.com/embed/medias/uukp3q3u5e/swatch'); }
+  </style>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 18px; line-height: 1.7; color: #1a1a1a; background: #fff;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: 0; }
+
+    :root {
+      --green: #0f4c2e; --green-deep: #0b3a23;
+      --gold: #c9a84c; --orange: #f97316; --orange-hover: #ea580c;
+      --black: #1a1a1a; --offwhite: #f9fafb; --white: #fff;
+      --gray: #4b5563; --card-bg: #fafaf8; --border: rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 800; line-height: 1.15; letter-spacing: -0.01em;
+    }
+    h1 { font-size: clamp(34px, 4.8vw, 52px); color: #fff; }
+    h2 { font-size: clamp(26px, 3.6vw, 38px); }
+    h3 { font-size: 20px; font-weight: 700; }
+
+    .eyebrow {
+      display: inline-block; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px;
+    }
+    .eyebrow-gold { color: var(--gold); }
+    .eyebrow-green { color: var(--green); }
+
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============================================================
+       SECTION 1 — HERO (split layout: content + form)
+       ============================================================ */
+    .hero {
+      padding: 96px 0 80px; color: #fff;
+      background-image:
+        linear-gradient(to right, rgba(15,76,46,0.94), rgba(15,76,46,0.85), rgba(15,76,46,0.78)),
+        url('https://d2xsxph8kpxj0f.cloudfront.net/310519663434216877/HRLfVC2e3GYPthVLiKfkRh/hero-golf-bg-RXEvvfxSLUcybKZaCZxgMi.webp');
+      background-size: cover; background-position: center;
+      min-height: 100vh;
+      display: flex; align-items: center;
+    }
+    @media (max-width: 768px) { .hero { padding: 80px 0 64px; min-height: auto; } }
+
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      gap: 56px; align-items: center;
+    }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .hero-content h1 .gold { color: var(--gold); display: block; }
+    .hero-sub {
+      color: rgba(255,255,255,0.85); font-size: clamp(17px, 1.6vw, 20px);
+      line-height: 1.6; margin: 22px 0 28px;
+    }
+    .hero-bullets { list-style: none; margin: 0 0 26px; padding: 0; }
+    .hero-bullets li {
+      color: #fff; font-size: 16px; font-weight: 500;
+      padding: 7px 0; display: flex; align-items: center; gap: 12px;
+    }
+    .check {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; flex: 0 0 22px; color: var(--gold);
+    }
+    .trust-row {
+      display: flex; align-items: center; gap: 12px; margin-top: 22px;
+      color: rgba(255,255,255,0.75); font-size: 13px;
+    }
+    .trust-row .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
+    }
+
+    /* Form card */
+    .form-card {
+      background: #fff; border-radius: 16px; padding: 36px 32px;
+      box-shadow: 0 30px 60px -15px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.15);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--black);
+    }
+    @media (max-width: 480px) { .form-card { padding: 28px 22px; } }
+    .form-eyebrow {
+      display: inline-block; background: rgba(15,76,46,0.08);
+      color: var(--green); padding: 6px 14px; border-radius: 999px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    .form-card h2 {
+      font-size: 26px; color: var(--black); margin-bottom: 8px; line-height: 1.2;
+    }
+    .form-card .form-sub {
+      color: var(--gray); font-size: 15px; line-height: 1.5; margin-bottom: 22px;
+    }
+
+    /* Form fields */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+    .form-field { margin-bottom: 12px; }
+    .form-field label {
+      display: block; font-size: 13px; font-weight: 600;
+      color: var(--black); margin-bottom: 5px;
+    }
+    .form-field input,
+    .form-field select {
+      width: 100%; padding: 12px 14px; border: 1.5px solid #d1d5db;
+      border-radius: 8px; font-family: inherit; font-size: 15px;
+      color: var(--black); background: #fff;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .form-field input:focus,
+    .form-field select:focus {
+      outline: none; border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(15,76,46,0.12);
+    }
+    .form-submit {
+      width: 100%; padding: 16px 24px; margin-top: 8px;
+      background: var(--orange); color: #fff;
+      font-family: inherit; font-weight: 700; font-size: 15px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      border-radius: 8px; border: 0; cursor: pointer;
+      box-shadow: 0 10px 24px rgba(249,115,22,0.3);
+      transition: transform .3s ease, background .3s ease, box-shadow .3s ease;
+    }
+    .form-submit:hover {
+      background: var(--orange-hover); transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(249,115,22,0.4);
+    }
+    .form-microcopy {
+      color: var(--gray); font-size: 12px; line-height: 1.5;
+      margin-top: 14px; text-align: center;
+    }
+    /* ============================================================
+       MAILERLITE EMBED OVERRIDES — restyle to Augusta Elegance look
+       ============================================================ */
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper {
+      background-color: transparent !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper.embedForm,
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper.embedDefault,
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper.embedPopup {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody {
+      padding: 0 !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-block-form .ml-field-group label {
+      font-family: 'Inter', sans-serif !important;
+      color: #1a1a1a !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      margin-bottom: 5px !important;
+      letter-spacing: normal !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input,
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select {
+      border: 1.5px solid #d1d5db !important;
+      border-radius: 8px !important;
+      font-family: 'Inter', sans-serif !important;
+      font-size: 15px !important;
+      padding: 12px 14px !important;
+      color: #1a1a1a !important;
+      line-height: 1.4 !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:focus,
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select:focus {
+      border-color: #0f4c2e !important;
+      box-shadow: 0 0 0 3px rgba(15,76,46,0.12) !important;
+      outline: none !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary {
+      background-color: #f97316 !important;
+      color: #fff !important;
+      font-family: 'Inter', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      padding: 16px 24px !important;
+      border-radius: 8px !important;
+      border: 0 !important;
+      box-shadow: 0 10px 24px rgba(249,115,22,0.3) !important;
+      transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease !important;
+      height: auto !important;
+      line-height: 1.2 !important;
+      cursor: pointer;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover {
+      background-color: #ea580c !important;
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(249,115,22,0.4) !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent {
+      margin: 0 0 16px 0 !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+      margin: 0 0 14px 0 !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+      margin: 0 0 14px 0 !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+      margin: 0 !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+      padding: 16px 0 0 0 !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+      font-family: 'Playfair Display', serif !important;
+      color: #0f4c2e !important;
+      font-size: 24px !important;
+      font-weight: 800 !important;
+    }
+    #mlb2-42152147.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+      font-family: 'Inter', sans-serif !important;
+      color: #4b5563 !important;
+      font-size: 15px !important;
+    }
+
+    /* ============================================================
+       SECTION 2 — SOCIAL PROOF / TESTIMONIALS
+       ============================================================ */
+    section { padding: 88px 0; position: relative; }
+    @media (max-width: 768px) { section { padding: 64px 0; } }
+
+    .testimonials-section { background: var(--offwhite); text-align: center; }
+    .section-sub {
+      color: var(--gray); font-size: 18px; max-width: 640px;
+      margin: 12px auto 0;
+    }
+    .grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-top: 48px; text-align: left;
+    }
+    @media (max-width: 1024px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px)  { .grid-3 { grid-template-columns: 1fr; } }
+
+    .testimonial-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 14px; padding: 28px;
+      transition: transform .3s ease, box-shadow .3s ease;
+      display: flex; flex-direction: column;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(15,76,46,0.2);
+    }
+    .video-thumb {
+      aspect-ratio: 9 / 16; max-width: 230px;
+      margin: 0 auto 18px;
+      background: var(--green-deep); border-radius: 10px; overflow: hidden;
+      box-shadow: 0 10px 24px -10px rgba(15,76,46,0.35);
+    }
+    .video-thumb wistia-player {
+      width: 100% !important; height: 100% !important; display: block;
+    }
+    .badge-pill {
+      display: inline-block; background: var(--green); color: #fff;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.03em;
+      padding: 5px 13px; border-radius: 999px; margin-bottom: 14px;
+    }
+    .quote {
+      font-style: italic; font-size: 16px; color: #374151;
+      line-height: 1.6; margin-bottom: 16px; flex: 1;
+    }
+    .quote::before { content: '"'; }
+    .quote::after { content: '"'; }
+    .divider { border-top: 1px solid #e5e7eb; padding-top: 14px; }
+    .person-name { font-weight: 700; color: var(--black); font-size: 16px; }
+    .person-detail { color: #6b7280; font-size: 14px; margin-top: 2px; }
+
+    /* ============================================================
+       SECTION 3 — REASSURE STRIP
+       ============================================================ */
+    .reassure-section {
+      background: var(--green); color: #fff; text-align: center;
+      padding: 56px 0;
+    }
+    .reassure-section h2 { color: #fff; max-width: 720px; margin: 0 auto 12px; }
+    .reassure-section p {
+      color: rgba(255,255,255,0.8); font-size: 17px;
+      max-width: 620px; margin: 0 auto;
+    }
+    .reassure-section .scroll-cta {
+      display: inline-block; margin-top: 24px; font-size: 13px;
+      color: var(--gold); letter-spacing: 0.16em; text-transform: uppercase;
+      font-weight: 700; cursor: pointer;
+    }
+    .reassure-section .scroll-cta:hover { color: #fff; }
+
+    /* Reveal animations */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity .6s ease-out, transform .6s ease-out;
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+
+  <!-- Hyros Tracking Pixel -->
+  <script>
+    var head = document.head;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = "https://t.fairwayperformance.com/v1/lst/universal-script?ph=a6fd5ed58e0eb834a37dd8eb12e3c0cf62f2a218d69340bbcba058df9c0d6fef&tag=!clicked&ref_url=" + encodeURI(document.URL);
+    head.appendChild(script);
+  </script>
+</head>
+<body>
+
+  <!-- ===== SECTION 1 — Hero + Form ===== -->
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Left: pitch -->
+        <div class="hero-content">
+          <span class="eyebrow eyebrow-gold reveal">Free Mobility Self-Assessment</span>
+          <h1 class="reveal">
+            See What Area of Your Body
+            <span class="gold">Is Limiting Your Swing</span>
+            — In Less Than 5 Minutes
+          </h1>
+          <p class="hero-sub reveal">
+            Free, TPI-driven self-assessment for golfers over 35. Discover the #1 mobility limitation holding back your distance, your consistency, and your pain-free play.
+          </p>
+          <ul class="hero-bullets reveal">
+            <li>
+              <span class="check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              4 short tests you can do at home in under 5 minutes
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Identifies what's actually costing you yards
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Built around the TPI movement screen
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Instant access — sent straight to your inbox
+            </li>
+          </ul>
+          <div class="trust-row reveal">
+            <span class="dot"></span>
+            <span>TPI Level 3 Certified · Trusted by golfers worldwide</span>
+          </div>
+        </div>
+
+        <!-- Right: form card -->
+        <div class="form-card reveal">
+          <span class="form-eyebrow">Get Instant Access</span>
+          <h2>Where should we send your assessment?</h2>
+          <p class="form-sub">Watch the videos online and we'll also email a copy so you can refer back any time.</p>
+
+          <!-- MailerLite form — submissions flow into your subscriber list and trigger your automation -->
+          <div id="mlb2-42152147" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42152147">
+            <div class="ml-form-align-center">
+              <div class="ml-form-embedWrapper embedForm">
+                <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/86899/forms/189265645306644332/subscribe" data-code="" method="post" target="_blank">
+                    <div class="ml-form-formContent">
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-name">
+                          <label>First Name</label>
+                          <input aria-label="name" type="text" class="form-control" name="fields[name]" autocomplete="given-name">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                          <label>Email</label>
+                          <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" autocomplete="email">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-phone ml-validate-required">
+                          <label>Phone</label>
+                          <input aria-label="phone" aria-required="true" type="text" class="form-control" name="fields[phone]" autocomplete="tel">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow ml-last-item">
+                        <div class="ml-field-group ml-field-country ml-validate-required">
+                          <label>How did you hear about us?</label>
+                          <select class="custom-select" name="fields[country]" aria-label="country" aria-required="true">
+                            <option value="">Choose one…</option>
+                            <option>Instagram</option>
+                            <option>Youtube</option>
+                            <option>Email</option>
+                            <option>Podcast</option>
+                            <option>Not sure</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <div class="ml-form-embedSubmit">
+                      <button type="submit" class="primary">Send Me The Assessment</button>
+                      <button disabled="disabled" style="display: none;" type="button" class="loading">
+                        <div class="ml-form-embedSubmitLoad"></div>
+                        <span class="sr-only">Loading...</span>
+                      </button>
+                    </div>
+                    <input type="hidden" name="anticsrf" value="true">
+                  </form>
+                </div>
+                <div class="ml-form-successBody row-success" style="display: none">
+                  <div class="ml-form-successContent">
+                    <h4>You're In!</h4>
+                    <p>Sending you to your videos now…</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="form-microcopy">
+            We respect your inbox. No spam — just the assessment and the occasional helpful golf-fitness tip.
+          </p>
+
+          <script>
+            function ml_webform_success_42152147() {
+              var $ = ml_jQuery || jQuery;
+              $('.ml-subscribe-form-42152147 .row-success').show();
+              $('.ml-subscribe-form-42152147 .row-form').hide();
+              // Failsafe: redirect after success message briefly shows, in case the
+              // redirect URL configured in MailerLite doesn't kick in for any reason.
+              setTimeout(function () { window.location.href = '/self-assessment'; }, 1200);
+            }
+          </script>
+          <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+          <script>fetch("https://assets.mailerlite.com/jsonp/86899/forms/189265645306644332/takel");</script>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2 — Social Proof ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <span class="eyebrow eyebrow-green reveal">Real Results</span>
+      <h2 class="reveal">What Golfers Are Saying</h2>
+      <p class="section-sub reveal">These golfers ran through the same assessment you're about to take. Here's what changed once they fixed the right thing.</p>
+
+      <div class="grid-3">
+        <article class="testimonial-card reveal">
+          <div class="video-thumb"><wistia-player media-id="ts90olaac4" aspect="0.5625"></wistia-player></div>
+          <span class="badge-pill">+22 yards off the tee</span>
+          <p class="quote">I was skeptical at first, but within 8 weeks I'd added over 20 yards to my driver. My back doesn't hurt anymore and I'm playing the best golf of my life.</p>
+          <div class="divider">
+            <div class="person-name">Erik</div>
+            <div class="person-detail">Age 47 | Handicap: 12 → 8</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb"><wistia-player media-id="lq28nchwmv" aspect="0.5625"></wistia-player></div>
+          <span class="badge-pill">Pain-free after 18 holes</span>
+          <p class="quote">For the first time in years, I can play a full round without my lower back locking up.</p>
+          <div class="divider">
+            <div class="person-name">Rhys</div>
+            <div class="person-detail">Age 52 | Member for 6 months</div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="video-thumb"><wistia-player media-id="uukp3q3u5e" aspect="0.5625"></wistia-player></div>
+          <span class="badge-pill">Consistent ball striking</span>
+          <p class="quote">The mobility work transformed my swing. I'm hitting it more consistently than I have in 10 years.</p>
+          <div class="divider">
+            <div class="person-name">Chris</div>
+            <div class="person-detail">Age 41 | Gained 15 yards</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3 — Reassure & Scroll Back ===== -->
+  <section class="reassure-section">
+    <div class="container">
+      <h2 class="reveal">Ready to See What's Limiting Your Swing?</h2>
+      <p class="reveal">Fill in the form at the top and the assessment will be in your inbox before you've finished your coffee.</p>
+      <a class="scroll-cta reveal" href="#top">↑ Get My Assessment</a>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var staggerMap = new Map();
+      els.forEach(function (el) {
+        var p = el.parentElement;
+        if (!staggerMap.has(p)) staggerMap.set(p, []);
+        staggerMap.get(p).push(el);
+      });
+      staggerMap.forEach(function (siblings) {
+        siblings.forEach(function (el, idx) { el.dataset.staggerIndex = idx; });
+      });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            var idx = parseInt(el.dataset.staggerIndex || '0', 10);
+            var delay = Math.min(idx * 100, 600);
+            el.style.transitionDelay = delay + 'ms';
+            el.classList.add('is-visible');
+            io.unobserve(el);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
